@@ -1,0 +1,104 @@
+.navbar {
+    width: 100%;
+    height: 30vh;
+    margin:  2px 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: black;
+    box-shadow: 1px 1px 5px grey;
+    background-color: white;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 0, 0, 0.2) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(0, 255, 0, 0.2) 0%, transparent 20%);
+    background-size: 200% 200%;
+    animation: patternMove 10s ease infinite;
+    
+}
+
+@keyframes patternMove {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.logo-post{
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 2px ;
+}
+
+.logo-post .logo {
+    width: 30%
+}
+
+.logo-post .ads {
+    margin: 30px;
+    width: 40%;
+    height: 80%;
+    background-color: black;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 20px;
+    align-items: center;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    margin-top : 10px;
+}
+
+.nav-links ul li{
+    position: relative;
+}
+.nav-links ul li::after{
+    content: "";
+    position: absolute;
+    width : 0;
+    height: 3px;
+    bottom: -3px;
+    left : 0;
+    background-color: blue;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links ul li:hover::after , .nav-links ul li.active::after{
+   width : 100%;
+}
+
+.nav-links ul .link {
+    text-decoration: none;
+    color: black
+}
+
+.free-palestine{
+    height: 100%;
+    margin : 10px;
+    width : 40%;
+    margin : 50px;
+    overflow: hidden;
+    box-sizing: 1px 1px 4px gray ;
+    border-radius: 20px;
+}
+.free-palestine img{
+    width : 100%;
+    height: 100%;
+}
+
