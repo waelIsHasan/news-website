@@ -1,10 +1,9 @@
 // src/components/PostsList.js
 import { useContext } from 'react';
-import ApiContext from '../../contexts/ApiContext.js';
+import ApiTechContext from '../../contexts/ApiTechContext.js';
 
 const Article = () => {
-  const { data, loading, error } = useContext(ApiContext);
-
+  const { data, loading, error } = useContext(ApiTechContext);
   if (loading) return <p>Loading posts...</p>;
   if (error) return <p>Error: {error}</p>;
 

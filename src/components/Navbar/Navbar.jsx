@@ -16,19 +16,19 @@ export default function Navbar(){
             <div className='nav-links'>
                     <ul className='links'>
                         <li className='active'>
-                            <Link className='link' to=''>News</Link>
+                            <Link to="/home" className='link' >News</Link>
                         </li>
                         <li>
-                        <Link className='link' to=''>United State</Link>
+                        <Link className='link' to='us'>United State</Link>
                         </li>
                         <li>
-                        <Link className='link' to=''>Entertainment</Link>
+                        <Link className='link' to='entertainment'>Entertainment</Link>
                         </li>
                         <li>
-                        <Link className='link' to=''>Science</Link>
+                        <Link className='link' to='science'>Science</Link>
                         </li>
                         <li>
-                        <Link className='link' to=''>Technology</Link>
+                        <Link className='link' to='tech'>Technology</Link>
                         </li>
                     </ul>
                     <div className='nav-search'>

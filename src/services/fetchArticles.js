@@ -1,13 +1,20 @@
-export const fetchArticles = async () => {
+const fetchWithDelay = async (url, delay = 1000) => {
+  const [response] = await Promise.all([
+    fetch(url),
+    new Promise(resolve => setTimeout(resolve, delay))
+  ]);
+  return response;
+};
+
+export const fetchArticles = async (url) => {
     try {
-      const response = await fetch('https://newsapi.org/v2/everything?q=bitcoin&apiKey=8f87dd79837644e7915357c55a095931');
-      // const response = await fetch('https://api.mediastack.com/v1/news?access_key=953ea4b62d21a3ce825088ca14f69633&keywords=tennis&countries=us,gb,de');
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
+      const response = await fetchWithDelay(url , 3000)
+      console.log(response)
       return await response.json();
     } catch (error) {
       console.error('Error fetching posts:', error);
       throw error;
     }
   };
+
+
