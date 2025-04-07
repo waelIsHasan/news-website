@@ -1,18 +1,18 @@
 import ArticleCard from "../ArticleCard/ArticleCard";
 import { Link } from "react-router-dom";
-import ApiTechContext from '../../contexts/ApiTechContext.js';
+import ApiContext from '../../contexts/ApiContext.js';
 import { useContext } from "react";
 
 import "./Block.css";
 export default function Block() {
-  const {data , loading , error} = useContext(ApiTechContext);
+  const {data , loading , error} = useContext(ApiContext);
   if(error){
     return <h1>error...</h1>
   }
   if(loading){
     return <h1>loading..</h1>
   }
-  const dataset = data?.slice(0 , 4);
+  const dataset = data?.slice(4 , 8);
   const posts = [];
       for (let i = 0; i < 4; i++) {
        if(i === 0){

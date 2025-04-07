@@ -1,12 +1,9 @@
 import { createContext, useState, useEffect } from "react";
 import { fetchArticles } from "../services/fetchArticles";
-import { fetchTechArticles } from "../services/fetchTechArticles.js";
 
 const ApiContext = createContext();
-const urlEverything =
-  "https://newsapi.org/v2/everything?q=bitcoin&apiKey=8f87dd79837644e7915357c55a095931";
 
-export const ApiProvider = ({ children }) => {
+export const ApiProvider = ({ children  , url}) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -14,7 +11,8 @@ export const ApiProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await fetchArticles(urlEverything);
+        const result = await fetchArticles(url);
+        console.log("hello"+result)
         setData(result["articles"]);
       } catch (error) {
         let message = error.message;
@@ -27,7 +25,7 @@ export const ApiProvider = ({ children }) => {
       }
     };
     fetchData();
-  }, []); // Empty dependency array means this runs once on mount
+  }, [url]); // Empty dependency array means this runs once on mount
 
   return (
     <ApiContext.Provider value={{ data, loading, error }}>

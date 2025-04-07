@@ -44,11 +44,18 @@
     width: 30%
 }
 
-.logo-post .ads {
+.logo-post .free-palestine {
     margin: 30px;
     width: 40%;
-    height: 80%;
+    height: 90%;
     background-color: black;
+    position: relative;
+}
+
+.free-palestine img{
+    position: absolute;
+    width: 100%;
+    left: 0;
 }
 
 .nav-links {

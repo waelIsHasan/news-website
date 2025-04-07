@@ -6,11 +6,10 @@ import{ApiTechProvider} from './contexts/ApiTechContext.js'
 import Home from './pages/Home/Home.jsx'
 import Tech from './pages/Tech/Tech.jsx'
 
+
 function App() {
   return (
     <BrowserRouter>
-      <ApiProvider>
-      <ApiTechProvider>
         <div className="App">
           <Navbar />
           <Routes>
@@ -18,8 +17,6 @@ function App() {
             <Route path="/tech" element={ <Tech/> }/>
           </Routes>
         </div>
-        </ApiTechProvider>
-      </ApiProvider>
     </BrowserRouter>
   );
 }

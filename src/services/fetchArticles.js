@@ -6,11 +6,12 @@ const fetchWithDelay = async (url, delay = 1000) => {
   return response;
 };
 
+
+
 export const fetchArticles = async (url) => {
     try {
       const response = await fetchWithDelay(url , 3000)
-      console.log(response)
-      return await response.json();
+      return await response.json();;
     } catch (error) {
       console.error('Error fetching posts:', error);
       throw error;
