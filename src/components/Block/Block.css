@@ -4,11 +4,24 @@
     padding : 10px;
     margin: 5px 50px;
 }
+
+.loading-block{
+    display: flex;
+    width : 95%; 
+    padding : 10px;
+    margin: 5px 50px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .big-block{
     width: 900px;
     padding : 10px;
-
 }
+
+
 .header-block{
     display: flex;
     width : 95%;
@@ -19,6 +32,8 @@
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.329);
 }
 
+
+
 .header-block span{
     background-color: blue;
     padding : 5px 10px 
@@ -28,11 +43,9 @@
 .header-block ul {
     display: flex;
     list-style: none;
-    background-color: red;
+    /* background-color: red; */
     gap : 120px;
     align-items: center;
-    
-
 }
 
 .header-block ul .link{
@@ -40,8 +53,10 @@
     color : gray;
     font-size: 15px;
 }
+.header-block ul .link:hover{
+    color: blue;
+}
 
 .header-block select , .header-block select:focus , .header-block select:checked{
     border: none;
 }
-

@@ -4,6 +4,9 @@ import Banner from "../Banner/Banner";
 import { useContext } from "react";
 import ApiContext from "../../contexts/ApiContext.js";
 
+import Skeleton from '@mui/material/Skeleton';
+
+
 export default function Grid() {
   const { data, loading, error } = useContext(ApiContext);
   if (error) {
@@ -19,7 +22,11 @@ export default function Grid() {
     for (let i = 0; i < 4; i++) {
       banners.push(
         <div key={`${i}`} className={`item-${i}`}>
-          <Banner />
+          <div style={{height : '100%'}}>
+          <Skeleton  sx={{ bgcolor: 'grey.600', height: '100%' , padding :'0'}}/>
+          <Skeleton animation="wave"/>
+          <Skeleton width="60%" />
+          </div>
         </div>
       );
     }

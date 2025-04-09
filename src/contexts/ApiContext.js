@@ -12,7 +12,6 @@ export const ApiProvider = ({ children  , url}) => {
     const fetchData = async () => {
       try {
         const result = await fetchArticles(url);
-        console.log("hello"+result)
         setData(result["articles"]);
       } catch (error) {
         let message = error.message;
