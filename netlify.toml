@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[functions]
+  # This ensures Netlify includes environment variables for functions
+  included_files = [".env"]
