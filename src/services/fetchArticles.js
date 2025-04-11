@@ -10,9 +10,12 @@ const fetchWithDelay = async (url, delay = 1000) => {
 
 export const fetchArticles = async (url) => {
     try {
-      const urlProxy = `/.netlify/functions/news-proxy.js?url=${url}`
-      const response = await fetchWithDelay(urlProxy , 3000)
-      console.log(response.json())
+
+      // const urlProxy = `${url}`
+      const proxyUrl = `/.netlify/functions/news-proxy?url=${encodeURIComponent(url)}`;
+
+      const response = await fetchWithDelay(proxyUrl , 3000)
+      console.log(response)
       return await response.json();;
     } catch (error) {
       console.error('Error fetching posts:', error);
