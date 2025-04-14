@@ -7,17 +7,15 @@ import { HeaderBlockProvider } from "../../contexts/HeaderBlockContext.js";
 export default function Home() {
   return (
     <div className="home">
-      <ApiProvider url={endPoint["everything"]}>
+      <ApiProvider url={endPoint["general"]}>
         <Grid />
       </ApiProvider>
-
-      <ApiProvider url={endPoint["tech"]}>
+      <ApiProvider url={endPoint["sports"]}>
         <HeaderBlockProvider headerTheme={"doNotMiss"}>
           {/* this is to provide the block the right theme data from context */}
           <Block />
         </HeaderBlockProvider>
       </ApiProvider>
-
       <ApiProvider url={endPoint["entertainment"]}>
         <HeaderBlockProvider headerTheme={"toBeSmart"}>
           <Block />

@@ -1,20 +1,20 @@
 import ArticleCard from "../ArticleCard/ArticleCard";
 import { Link } from "react-router-dom";
+import { endPoint } from "../../services/apiEndPoints.js";
 import ApiContext from "../../contexts/ApiContext.js";
 import HeaderBlockContext from "../../contexts/HeaderBlockContext.js";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
-
 import "./Block.css";
 export default function Block() {
-  const { data, loading, error } = useContext(ApiContext);
+  const { data, loading, error, refresh } = useContext(ApiContext);
   if (error) {
     return <h1>error...</h1>;
   }
   if (loading) {
     return (
       <div className="big-block">
-        <HeaderBlock />
+        <HeaderBlock onClick={refresh} />
         <div className="loading-block">
           <CircularProgress />
         </div>
@@ -65,16 +65,18 @@ export default function Block() {
 
   return (
     <div className="big-block">
-      <HeaderBlock />
-      <div className="posts-block">{dataset && posts}</div>
+      <HeaderBlock onClick={refresh} />
+      <div className="posts-block">{posts}</div>
     </div>
   );
 }
 
 // Header Block component
-function HeaderBlock() {
+function HeaderBlock({ onClick }) {
   const value = useContext(HeaderBlockContext);
+  const { updateCurUrl, curUrl } = useContext(ApiContext);
   const className = value.name;
+  console.log(curUrl);
   return (
     <div className={`header-block ${className}`}>
       <span>{value.name}</span>
@@ -82,7 +84,13 @@ function HeaderBlock() {
         {value.links.map((link) => {
           return (
             <li key={link.name}>
-              <Link className="link" to={link.url}>
+              <Link
+                onClick={() => {
+                  updateCurUrl(endPoint[link.name]);
+                  onClick();
+                }}
+                className="link"
+              >
                 {link.name}
               </Link>
             </li>

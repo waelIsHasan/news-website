@@ -6,8 +6,6 @@ export default function ArticleCard({isVertical , title , author , date , img}) 
     className ='article-card-column';
     classNameParg = 'active'
   }
-
-
   return (
     <div className={className}>
       <img src={img} alt="" />

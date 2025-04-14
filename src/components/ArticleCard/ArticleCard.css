@@ -2,14 +2,16 @@
     display: flex;
     justify-content: space-between;
     width : 400px;
+    height: 150px;
     align-items: center;
-    padding : 0 5px;
+    padding : 10px 5px;
     gap : 10px;
     box-shadow: 1px 1px 6px rgba(128, 128, 128, 0.349);
     border-radius: 5px;
     margin : auto 10px;
     cursor: pointer;
     transition: all 0.4s ease;
+    overflow: hidden;
 }
 
 
@@ -18,6 +20,7 @@
     display: flex;
     flex-direction: column;
     width : 400px;
+    height: 500px;
     align-items: center;
     box-shadow: 1px 1px 6px rgba(128, 128, 128, 0.349);
     border-radius: 5px;
@@ -37,14 +40,16 @@ p{
 .article-card-column img{
     width : 90%;
     margin: 10px auto;
-    height: 160px;
+    height: 150px;
     object-fit: cover;
+    
 }
 
  .article-card img{
-   width : 30%;
-    height: 70%;
+   width : 20%;
+    height: 50%;
     object-fit: cover;
+
 }   
 
 .author-date{
@@ -57,12 +62,17 @@ p{
 .article-card h5{
     font-size: 12px;
     font-weight: 100;
-    color : gray
+    color : gray;
+    width: 20ch;
+    overflow: hidden;
 }
 
 .article-card h4{
+    width: 20ch;
     font-size: 15px;
     font-weight: 400;
+    overflow: hidden;
+
 }
 
 .inactive{

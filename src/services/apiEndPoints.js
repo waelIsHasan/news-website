@@ -21,6 +21,6 @@ export const headerBlockData = {
     toBeSmart : {
         name : "To Be Smart",
         className : "to-be-smart",
-        links : [{name : 'science' , url : '/science'} , {name : 'technology' , url : '/tech'} ,{name : 'business' , url : '/business'}]
+        links : [{name : 'science' , url : '/science'} , {name : 'tech' , url : '/tech'} ,{name : 'business' , url : '/business'}]
     }
 }

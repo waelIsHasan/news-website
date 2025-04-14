@@ -33,7 +33,7 @@ export default function Grid() {
     return <div className="custom-grid">{banners}</div>;
   }
 
-  const dataGrid = data.slice(4, 8);
+  const dataGrid = data.slice(2, 6);
   return (
     <div className="custom-grid">
       {dataGrid &&
