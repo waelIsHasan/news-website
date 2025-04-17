@@ -1,8 +1,7 @@
 .posts-block{
     display: flex;
     width : 95%; 
-    padding : 10px;
-    margin: 5px 50px;
+    margin : auto 50px
 }
 
 .loading-block{
@@ -17,19 +16,21 @@
 
 
 .big-block{
-    width: 900px;
+    width: 70%;
     padding : 10px;
+    
 }
 
 
 .header-block{
     display: flex;
-    width : 95%;
+    width : 98%;
     border-bottom: 2px solid blue;
     height: 30px;
     margin: 5px 50px;
     justify-content: space-between;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.329);
+    overflow: hidden;
 }
 
 
@@ -45,6 +46,7 @@
     list-style: none;
     /* background-color: red; */
     gap : 120px;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -60,3 +62,19 @@
 .header-block select , .header-block select:focus , .header-block select:checked{
     border: none;
 }
+
+
+@media only screen and (max-width: 700px) {
+    .posts-block{
+        display: flex;
+        flex-direction: column;
+        width : 100%; 
+        margin : auto 50px
+    }
+    .vl-post{
+        width : 100%
+    }
+    .hz-post{
+        width: 90%;
+    }
+  }

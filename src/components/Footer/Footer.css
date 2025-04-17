@@ -1,0 +1,44 @@
+.footer{
+    width : 100%;
+    height: 100vh;
+    background-color: rgba(20, 19, 19, 0.836);
+    display:  flex;
+    justify-content: space-around;
+    color : white
+}
+.sup-logo {
+    width : 300px;
+}
+.sup-logo  .icons{
+    display: flex;
+    justify-content: space-evenly;
+    gap : 5px
+}
+h1{
+    color : #fc0a02
+}
+.sup-logo  .logo{
+    width : 100px;
+    height: 100px;
+    margin: 0;
+}
+ul{
+    list-style: none;
+    line-height: 30px;
+}
+
+a{
+    text-decoration: none;
+    color : white
+}
+.filter-cover{
+    position: absolute;
+    width : 100%;
+    z-index: -1;
+    height: 100%;
+}
+.filter-cover img {
+    filter: grayscale(100%);
+    width: 100%;
+    height: 100%;
+  }

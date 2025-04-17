@@ -73,13 +73,13 @@ export default function Block() {
 
 // Header Block component
 function HeaderBlock({ onClick }) {
-  const value = useContext(HeaderBlockContext);
+  const {value , themeColor}  = useContext(HeaderBlockContext);
   const { updateCurUrl, curUrl } = useContext(ApiContext);
-  const className = value.name;
+  let className = value.name;
   console.log(curUrl);
   return (
-    <div className={`header-block ${className}`}>
-      <span>{value.name}</span>
+    <div className={`header-block ${className}`} style={themeColor}>
+      <span style={themeColor.x === 'blue' ? {backgroundColor : 'blue' , color : 'white'} : {backgroundColor : 'black' , color : 'white'}}>{value.name}</span>
       <ul>
         {value.links.map((link) => {
           return (

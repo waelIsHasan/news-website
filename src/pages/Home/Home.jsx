@@ -4,24 +4,41 @@ import "./Home.css";
 import { endPoint } from "../../services/apiEndPoints.js";
 import { ApiProvider } from "../../contexts/ApiContext.js";
 import { HeaderBlockProvider } from "../../contexts/HeaderBlockContext.js";
+import { GroupBanner } from "../../components/Banner/Banner.jsx";
+import CustomSwiper from "../../components/CutomSwiper/CutomSwiper.jsx";
 export default function Home() {
   return (
     <div className="home">
       <ApiProvider url={endPoint["general"]}>
         <Grid />
       </ApiProvider>
+
       <ApiProvider url={endPoint["sports"]}>
-        <HeaderBlockProvider headerTheme={"doNotMiss"}>
+        <HeaderBlockProvider headerTheme={"doNotMiss"} color={'black'}>
           {/* this is to provide the block the right theme data from context */}
           <Block />
         </HeaderBlockProvider>
       </ApiProvider>
+
       <ApiProvider url={endPoint["entertainment"]}>
-        <HeaderBlockProvider headerTheme={"toBeSmart"}>
+        <HeaderBlockProvider headerTheme={"toBeSmart"} color={'blue'}>
           <Block />
         </HeaderBlockProvider>
       </ApiProvider>
 
+      <ApiProvider url={endPoint["tech"]}>
+        <GroupBanner />
+      </ApiProvider>
+
+      <ApiProvider url={endPoint["science"]}>
+        <HeaderBlockProvider headerTheme={"toBeSmart"} color={'blue'}>
+          <Block />
+        </HeaderBlockProvider>
+      </ApiProvider>
+
+      <ApiProvider url={endPoint["general"]}>
+        <CustomSwiper />
+      </ApiProvider>
     </div>
   );
 }
