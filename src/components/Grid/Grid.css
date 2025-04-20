@@ -27,3 +27,28 @@
     grid-column: 4; /* Starts at column 3 */
     grid-row: 2;
   }
+
+  @media only screen and (max-width: 900px) {
+
+.custom-grid {
+    display: flex;
+    gap: 8px;
+    margin: 20px auto;
+    overflow: hidden;
+    width : 90%;
+  }
+
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    .custom-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 20px auto;
+        overflow: hidden;
+        width : 90%;
+      }
+    
+      }

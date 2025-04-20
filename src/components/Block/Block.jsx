@@ -6,10 +6,19 @@ import HeaderBlockContext from "../../contexts/HeaderBlockContext.js";
 import { useContext, useState } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import "./Block.css";
-export default function Block() {
+import List from "../List/List.jsx";
+export default function Block({isList = false}) {
   const { data, loading, error, refresh } = useContext(ApiContext);
+  if(isList){
+    return <List data={data} loading={loading} error={error} refresh={refresh}/>
+  }
   if (error) {
-    return <h1>error...</h1>;
+    return (
+      <div className="big-block">
+        <HeaderBlock onClick={refresh} />
+          <h1>Retry Again !</h1>
+      </div>
+    );
   }
   if (loading) {
     return (
@@ -21,8 +30,9 @@ export default function Block() {
       </div>
     );
   }
-  const dataset = data?.slice(4, 8);
+  const dataset = data?.slice(0, 4);
   const posts = [];
+  // I need four cards it seems complicated but its take i vertical then the i + 1 , i + 2 , i + 3 horizental
   for (let i = 0; i < 4; i++) {
     if (i === 0) {
       posts.push(
@@ -72,14 +82,22 @@ export default function Block() {
 }
 
 // Header Block component
-function HeaderBlock({ onClick }) {
-  const {value , themeColor}  = useContext(HeaderBlockContext);
+export function HeaderBlock({ onClick }) {
+  const { value, themeColor } = useContext(HeaderBlockContext);
   const { updateCurUrl, curUrl } = useContext(ApiContext);
   let className = value.name;
   console.log(curUrl);
   return (
     <div className={`header-block ${className}`} style={themeColor}>
-      <span style={themeColor.x === 'blue' ? {backgroundColor : 'blue' , color : 'white'} : {backgroundColor : 'black' , color : 'white'}}>{value.name}</span>
+      <span
+        style={
+          themeColor.x === "blue"
+            ? { backgroundColor: "blue", color: "white" }
+            : { backgroundColor: "black", color: "white" }
+        }
+      >
+        {value.name}
+      </span>
       <ul>
         {value.links.map((link) => {
           return (

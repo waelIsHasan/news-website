@@ -2,6 +2,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import "swiper/css/effect-fade";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import './CustomSwiper.css'
 import Banner from "../../components/Banner/Banner.jsx";
 import { useRef } from "react";
 // Import Swiper styles
@@ -54,7 +55,7 @@ export default function CustomSwiper() {
     );
   }
   return (
-    <div style={{ margin: "40px 60px" }}>
+    <div className="custom-swiper not-active">
       <Swiper
         ref={swiperRef}
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}

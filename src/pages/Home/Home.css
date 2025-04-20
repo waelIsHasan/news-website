@@ -1,0 +1,16 @@
+.f-blocks{
+    display: flex;
+    overflow: hidden;
+    gap : 0;
+    
+}
+
+.list-block{
+    width : 40%;
+    padding : 10px;
+}
+
+.f-block{
+    display: flex;
+    justify-content: space-between;
+}

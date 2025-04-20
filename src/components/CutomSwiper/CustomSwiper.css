@@ -1,0 +1,10 @@
+.custom-swiper{
+    margin : 80px
+}
+
+@media only screen and (max-width: 600px) {
+.not-active{
+    display: none;
+}
+
+}

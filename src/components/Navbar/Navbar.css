@@ -115,6 +115,8 @@
         justify-content: space-between;
         margin: 5px 20px;
         align-items: center;
+        flex-flow: wrap;
+      overflow: hidden;
         
     }
     .nav-links ul {
@@ -123,7 +125,8 @@
         list-style: none;
         gap: 60px;
         margin-top : 10px;
-      
+        flex-flow: wrap;
+
     }
 }
 

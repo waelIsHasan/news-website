@@ -9,29 +9,30 @@ import CustomSwiper from "../../components/CutomSwiper/CutomSwiper.jsx";
 export default function Home() {
   return (
     <div className="home">
-      <ApiProvider url={endPoint["general"]}>
+      <ApiProvider url={endPoint["everything"]}>
         <Grid />
       </ApiProvider>
 
+      <div className="f-block">
       <ApiProvider url={endPoint["sports"]}>
-        <HeaderBlockProvider headerTheme={"doNotMiss"} color={'black'}>
+        <HeaderBlockProvider headerTheme={"doNotMiss"} color={"black"}>
           {/* this is to provide the block the right theme data from context */}
           <Block />
         </HeaderBlockProvider>
+        <GroupBanner isVertical={true}></GroupBanner>
       </ApiProvider>
-
+      </div>
       <ApiProvider url={endPoint["entertainment"]}>
-        <HeaderBlockProvider headerTheme={"toBeSmart"} color={'blue'}>
+        <HeaderBlockProvider headerTheme={"toBeSmart"} color={"blue"}>
           <Block />
         </HeaderBlockProvider>
       </ApiProvider>
-
       <ApiProvider url={endPoint["tech"]}>
         <GroupBanner />
       </ApiProvider>
 
       <ApiProvider url={endPoint["science"]}>
-        <HeaderBlockProvider headerTheme={"toBeSmart"} color={'blue'}>
+        <HeaderBlockProvider headerTheme={"toBeSmart"} color={"blue"}>
           <Block />
         </HeaderBlockProvider>
       </ApiProvider>

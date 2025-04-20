@@ -51,6 +51,18 @@
     justify-content: space-between;
     gap : 20px;
 }
+
+.vertical{
+    display: flex;
+    flex-direction: column;
+    width :  20%;
+    margin : 20px 50px;
+    justify-content: space-between;
+    gap : 20px;
+}
+.banner.list-banner{
+    width : 70%;
+}
 .glass-effect{
     top : 0;
     right: 0;

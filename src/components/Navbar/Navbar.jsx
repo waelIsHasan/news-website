@@ -33,7 +33,7 @@ export default function Navbar(){
             <div className='nav-links'>
                     <ul className='links'>
                         <li className='active'>
-                            <Link to="/home" className='link' >News</Link>
+                            <Link to="/" className='link' >News</Link>
                         </li>
                         <li>
                         <Link className='link' to='us'>United State</Link>
