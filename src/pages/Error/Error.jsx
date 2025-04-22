@@ -1,4 +1,4 @@
-export default function Error() {
+export default function Error({message = ''}) {
   const styleErrorPage = {
     display: "flex",
     justifyContent: "center",
@@ -10,7 +10,7 @@ export default function Error() {
   return (
     <div className="error-page" style={styleErrorPage}>
       <h1>
-        Opps... I am Sorry , <strong>Server Side Error</strong>
+        Opps..., <strong><i>{message}</i></strong>
       </h1>
     </div>
   );

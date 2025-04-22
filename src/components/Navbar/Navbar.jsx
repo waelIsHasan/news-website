@@ -48,8 +48,8 @@ export default function Navbar(){
                         <Link className='link' to='tech'>Technology</Link>
                         </li>
                     </ul>
-                    <div className='nav-search'>
-                        search
+                    <div className='dev'>
+                          <Link className="link-dev" to="/contact">Contact us</Link>
                     </div>
             </div>        
         </div>

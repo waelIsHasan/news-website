@@ -6,17 +6,19 @@ import HeaderBlockContext from "../../contexts/HeaderBlockContext.js";
 import { useContext, useState } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import "./Block.css";
+ import Error from '../../pages/Error/Error.jsx'
 import List from "../List/List.jsx";
 export default function Block({isList = false}) {
   const { data, loading, error, refresh } = useContext(ApiContext);
   if(isList){
     return <List data={data} loading={loading} error={error} refresh={refresh}/>
   }
+
   if (error) {
     return (
       <div className="big-block">
         <HeaderBlock onClick={refresh} />
-          <h1>Retry Again !</h1>
+         <Error message={error}></Error>
       </div>
     );
   }

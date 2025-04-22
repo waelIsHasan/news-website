@@ -1,0 +1,54 @@
+.group-card{
+    margin : 10px auto 0 ;
+    display: flex;
+    flex-flow: wrap;
+    width : 100%;
+    justify-content: space-between;
+    gap : 5px;
+background-image:
+radial-gradient(circle at 10% 20%, rgba(255, 0, 0, 0.2) 1%, transparent 20%),
+radial-gradient(circle at 90% 80%, rgba(0, 255, 0, 0.2) 2%, transparent 20%);
+background-size: 200% 200%;
+animation: patternMove 10s ease infinite;
+}
+
+@keyframes patternMove {
+0% {
+background-position: 0% 0%;
+}
+
+50% {
+background-position: 100% 100%;
+}
+
+100% {
+background-position: 0% 0%;
+}
+}
+
+
+.group-card-item.odd{
+    width : 30%;
+    height: 80%;
+    padding: 10px ;
+
+}
+.group-card-item.even {
+    width : 20%;
+    height: 40%;
+    padding: 10px auto;
+    margin : 10px
+}
+.group-card-item{
+    border-radius: 50px;
+    overflow: hidden;
+}
+@media only screen and (max-width: 700px) {
+
+    .group-card-item.odd{
+        width : 40%;
+    }
+    .group-card-item.even {
+        width : 45%;
+    }
+}

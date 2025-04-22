@@ -2,7 +2,7 @@ import Skeleton from '@mui/material/Skeleton';
 import "./Banner.css";
 import { useContext } from "react";
 import ApiContext from "../../contexts/ApiContext.js";
-import { Calculate } from '@mui/icons-material';
+import Error from '../../pages/Error/Error.jsx'
 export default function Banner({isFromList =false, isGlassEffect = false, src, title, img }) {
   let className = "";
   let classNameFromList = ''
@@ -30,8 +30,9 @@ export function GroupBanner({isVertical = false}) {
     className = 'vertical'
   }
   const { data, loading, error } = useContext(ApiContext);
+
   if (error) {
-    return <div>Error.,,</div>;
+    return <Error message={error}/>;
   }
   if (loading) {
     return (

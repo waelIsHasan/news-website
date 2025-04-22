@@ -1,11 +1,7 @@
 import logo from "../../assets/logo.png";
-import c4 from "../../assets/cr7.jpg";
+import c4 from "../../assets/pal3.png";
 import "./Footer.css";
 import { Link } from "react-router-dom";
-import { ApiProvider } from "../../contexts/ApiContext";
-import { HeaderBlockProvider } from "../../contexts/HeaderBlockContext";
-import Block from "../Block/Block";
-import { endPoint } from "../../services/apiEndPoints";
 export default function Footer() {
   return (
     <div className="footer">
@@ -32,7 +28,7 @@ export default function Footer() {
               <Link to="">About us </Link>
             </li>
             <li>
-              <Link to="">Contact us</Link>
+              <Link to="/contact">Contact us</Link>
             </li>
             <li>
               <Link to="">F&Q</Link>

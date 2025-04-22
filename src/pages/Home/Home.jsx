@@ -22,11 +22,7 @@ export default function Home() {
         <GroupBanner isVertical={true}></GroupBanner>
       </ApiProvider>
       </div>
-      <ApiProvider url={endPoint["entertainment"]}>
-        <HeaderBlockProvider headerTheme={"toBeSmart"} color={"blue"}>
-          <Block />
-        </HeaderBlockProvider>
-      </ApiProvider>
+      
       <ApiProvider url={endPoint["tech"]}>
         <GroupBanner />
       </ApiProvider>

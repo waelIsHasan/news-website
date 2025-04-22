@@ -3,12 +3,14 @@ import { HeaderBlock } from "../Block/Block"
 import CircularProgress from "@mui/material/CircularProgress";
 import './List.css'
 import { BorderAllRounded } from "@mui/icons-material";
+ import Error from '../../pages/Error/Error.jsx'
+
 export default function List({data, loading, error, refresh}){
    if (error) {
        return (
          <div className="big-block">
            <HeaderBlock onClick={refresh} />
-             <h1>Retry Again !</h1>
+             <Error message={error}></Error>
          </div>
        );
      }
