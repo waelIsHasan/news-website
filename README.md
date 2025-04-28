@@ -1,28 +1,31 @@
+# I deploy the project on netlify 
+## https://waelhasan2-news-website.netlify.app/
+
 # Project Archtecture
-news-website/
-├── public/                  # Static files
-├── src/
-│   ├── assets/              # Images, icons, fonts
-│   ├── components/          # Reusable UI components
-│   │   ├── ArticleCard/      # Individual article component
-│   │   ├── CategoryNav/      # News category navigation
-│   │   ├── Header/          # Main header with search
-│   │   ├── Footer/          # App footer
-│   ├── contexts/            # React contexts
-│   ├── hooks/               # Custom hooks
-│   ├── pages/               # Page components
-│   │   ├── Home/            # Home page with featured/news grid
-│   │   ├── Article/         # Single article page
-│   │   ├── Category/        # Category-specific page
-│   │   ├── Search/          # Search results page
-│   ├── services/            # API services
-│   ├── store/               # State management (if using Redux)
-│   ├── styles/              # Global styles, theme
-│   ├── utils/               # Utility functions
-│   ├── App.js               # Main app component
-│   ├── index.js             # Entry point
-├── .env                     # Environment variables
-├── package.json
+####    news-website/
+####    ├── public/                  # Static files
+####    ├── src/
+####    │   ├── assets/              # Images, icons, fonts
+####    │   ├── components/          # Reusable UI components
+####    │   │   ├── ArticleCard/      # Individual article component
+####    │   │   ├── CategoryNav/      # News category navigation
+####    │   │   ├── Header/          # Main header with search
+####    │   │   ├── Footer/          # App footer
+####    │   ├── contexts/            # React contexts
+####    │   ├── hooks/               # Custom hooks
+####    │   ├── pages/               # Page components
+####    │   │   ├── Home/            # Home page with featured/news grid
+####    │   │   ├── Article/         # Single article page
+####    │   │   ├── Category/        # Category-specific page
+####    │   │   ├── Search/          # Search results page
+####    │   ├── services/            # API services
+####    │   ├── store/               # State management (if using Redux)
+####    │   ├── styles/              # Global styles, theme
+####    │   ├── utils/               # Utility functions
+####    │   ├── App.js               # Main app component
+####    │   ├── index.js             # Entry point
+####    ├── .env                     # Environment variables
+####    ├── package.json
 
 # Getting Started with Create React App
 
